@@ -1,0 +1,163 @@
+/*body
+Define uma fonte padrão como Arial (ou qualquer fonte sans-serif se Arial não estiver disponível)
+Defina o tamanho padrão da fonte como 16px
+Adicionado um espaçamento interno (preenchimento) de 20px ao redor de todo o conteúdo da página 
+*/
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 20px;
+}
+
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+/*editor-container
+Usa=se flexbox para criar um layout com elementos lado a lado
+Adiciona um espaço de 20px entre os elementos filhos*/
+.editor-container {
+    display: flex;
+    gap: 20px;
+}
+/* editor-controls
+Define a largura do painel de controles como 800px
+Adiciona espaçamento interno de 20px
+Define um fundo rosa claro (lightpink)
+Adicionados cantos arredondados com raio de 8px
+Adiciona uma sombra suave para dar profundidade*/
+
+
+.editor-controls {
+    width: 800px;
+    padding: 20px;
+    background-color:lightpink;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+/* preview
+Define a largura da área de visualização como 800px
+Garantir uma altura mínima de 300px
+Adicionado espaçamento interno de 20px
+Define o fundo como branco (#fff)
+Adicionados cantos arredondados e sombras (semelhante ao painel de controles)*/
+
+
+.preview {
+    width: 800px;
+    min-height: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+/* menu-preview
+Define a fonte como Arial (com alternativas)
+Defina o tamanho da fon
+Define a fonte como Arial (com alternativas)
+Defina o tamanho da fonte como 16px
+Adicionadas bordas arredondadas de 5%
+Definir cor da borda como azul
+Definir o estilo da borda como duplo
+Usa flexbox com direção de coluna (elementos empilhados verticalmente)
+Ocupa 100% da largura disponível*/
+.menu-preview {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    border-radius: 5%;
+    border-color: blue;
+    border-style: double;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* menu-image
+Limite a largura máxima da imagem a 100% do container (para não estourar o layout)
+Adiciona margem de 10px abaixo da imagem*/
+
+.menu-image {
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+/* menu-list menu-list.vertical .menu-list.horizontal
+Remover marcadores padrão da lista (list-style-type: none)
+Remover preenchimento e margem padrão
+Usa flexbox para organizar os itens
+Adicionadas bordas arredondadas sutis (3px)
+Define duas variações: vertical (itens empilhados) e horizontal (itens lado a lado)*/
+
+.menu-list {
+    border-radius: 3px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu-list.vertical {
+    flex-direction: column;
+}
+
+.menu-list.horizontal {
+    flex-direction: row;
+}
+
+/*menu-item
+Adicionados cantos arredondados de 5px
+Definir cor da borda como azul
+Adicionado espaçamento interno de 10px (cima/baixo) e 15px (esquerda/direita)
+Adicionada margem de 2px para separar os itens
+Muda o cursor para um ponteiro quando passar sobre o item (indicando que é clicável)*/
+
+.menu-item {
+    border-radius: 5px;
+    border-color: blue;
+    padding: 10px 15px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+/* .color-picker-container Usa flexbox para alinhar os elementos horizontalmente
+Centraliza verticalmente os itens
+Adiciona espaço abaixo de cada contêiner
+Defina que os rótulos ocupem no mínimo 150px e tenham uma margem à direita de 10px*/
+
+.color-picker-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.color-picker-container label {
+    margin-right: 10px;
+    min-width: 150px;
+}
+
+/* # menuItens Limite de altura máxima da área de itens do menu a 200px
+Adiciona rolagem vertical automática quando o conteúdo ultrapassar essa altura */
+
+#menuItems {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* menu-item-control e .menu-item-control input 
+Use flexbox para alinhar os controles de cada item horizontalmente
+Centraliza os elementos verticalmente
+Adicionado espaço de 5px abaixo de cada controle
+Faz com que os campos de entrada cresçam para ocupar o espaço disponível
+Adicionada uma pequena margem à direita das entradas para separar os outros elementos*/
+
+.menu-item-control {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.menu-item-control input {
+    flex-grow: 1;
+    margin-right: 5px;
+}
